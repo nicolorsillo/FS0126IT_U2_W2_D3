@@ -225,6 +225,7 @@ body {
   bottom: -15%;
   right: 5%;
   width: 40%;
+  max-width: 765px;
 }
 .hero .hero-image img {
   width: 100%;
