@@ -1,0 +1,20 @@
+.btn {
+  padding: 0.8rem 1.5rem;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: transform 0.3s ease, filter 0.3s ease;
+  color: white;
+
+  &:hover {
+    transform: scale(1.05);
+    filter: brightness(1.1);
+  }
+}
+
+@each $name, $color in $button-colors {
+  .btn-#{$name} {
+    background-color: $color;
+  }
+}

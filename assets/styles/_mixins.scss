@@ -1,0 +1,15 @@
+@mixin floating($radius: 15px, $shadow: 0 10px 30px rgba(0,0,0,0.3), $border: none) {
+  border-radius: $radius;
+  box-shadow: $shadow;
+  border: $border;
+}
+
+@mixin grid($columns: 4, $gap: 20px) {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: $gap;
+  .grid-item{
+    width: calc(100% / $columns - $gap);
+  }
+}

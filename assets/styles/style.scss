@@ -1,0 +1,79 @@
+@import 'reset';
+@import 'colors';
+@import 'fonts';
+@import 'spacings';
+@import 'buttons';
+@import 'mixins';
+@import 'animations';
+
+body {
+  font-family: $font-main;
+  background-color: #f0f0f0;
+}
+.text-color-dark{
+    color: rgb(31, 7, 52);
+}
+.navbar {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2rem 5%;
+  background-color: $bg-hero;
+  color: $color-text;
+
+  .logo { font-weight: 900; font-size: 1.5rem; }
+  
+  .nav-links {
+    display: flex;
+    gap: 1.5rem;
+    font-size: 0.9rem;
+  }
+}
+
+.hero {
+  background-color: $bg-hero;
+  color: $color-text;
+  padding: 10% 5% 10% 5%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+
+  .hero-content {
+
+    h1 { @include title-big; }
+    p { margin-bottom: 2rem; max-width: 500px; }
+    
+    .button-group {
+      display: flex;
+      gap: 1rem;
+    }
+  }
+
+  .hero-image {
+    position: absolute;
+    bottom: -15%;
+    right: 5%;
+    width: 40%;
+    
+    
+    img {
+      width: 100%;
+      @include floating(10px, 0 20px 50px rgba(0, 0, 0, 0.5), 1px solid rgb(236, 119, 231));
+    }
+  }
+}
+
+.dynamic-grid {
+  background-color: white;
+  @include grid(4, 9px);
+
+  .grid-item {
+    img {
+      width: 100%;
+      @include floating(15px, 0 5px 15px rgba(0,0,0,0.1), 2px solid rgba(255,255,255,0.2));
+      @include fade-down("heroImg", 1.2s, 0.4s);
+    }
+  }
+}
